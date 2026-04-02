@@ -10,7 +10,7 @@ const connectDB = async () => {
     }
 
     try {
-        const uri = process.env.MONGO_URI || 'Techfix:Danu556..@cluster0.r6stqn1.mongodb.net/?appName=Cluster0';
+        const uri = process.env.MONGO_URI || 'Techfix:Danu556..@cluster0.kmeq2sx.mongodb.net/?appName=Cluster0';
         const db = await mongoose.connect(uri, {
             serverSelectionTimeoutMS: 5000 // Tweak timeout down so Serverless fails faster instead of hanging
         });
@@ -71,7 +71,7 @@ const initializeDatabase = async () => {
         if (!adminExists) {
             await User.create({
                 email: 'Admin',
-                password: 'Danu556..',
+                password: 'Abc@12345',
                 business_name: 'Admin Portal',
                 role: 'admin'
             });
